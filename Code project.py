@@ -114,26 +114,26 @@ module_6 = {"links_too":[],"Buttons":[],"prev":"Mods"}
 chap1 = {"links_too":[],"Buttons":[],"prev":"module_2"}
 chap2 = {"links_too":[],"Buttons":[],"prev":"module_2"}
 
-#chap3 = {"links_too":[],"Buttons":[],"prev":"module_3"}
-#chap4 = {"links_too":[],"Buttons":[],"prev":"module_3"}
-#chap5 = {"links_too":[],"Buttons":[],"prev":"module_3"}
-#chap6 = {"links_too":[],"Buttons":[],"prev":"module_3"}
-#chap7 = {"links_too":[],"Buttons":[],"prev":"module_3"}
+chap3 = {"links_too":[],"Buttons":[],"prev":"module_3"}
+chap4 = {"links_too":[],"Buttons":[],"prev":"module_3"}
+chap5 = {"links_too":[],"Buttons":[],"prev":"module_3"}
+chap6 = {"links_too":[],"Buttons":[],"prev":"module_3"}
+chap7 = {"links_too":[],"Buttons":[],"prev":"module_3"}
 
-#chap8 = {"links_too":[],"Buttons":[],"prev":"module_4"}
-#chap9 = {"links_too":[],"Buttons":[],"prev":"module_4"}
-#chap10 = {"links_too":[],"Buttons":[],"prev":"module_4"}
-#chap11 = {"links_too":[],"Buttons":[],"prev":"module_4"}
-#chap12 = {"links_too":[],"Buttons":[],"prev":"module_4"}
-#chap13 = {"links_too":[],"Buttons":[],"prev":"module_4"}
+chap8 = {"links_too":[],"Buttons":[],"prev":"module_4"}
+chap9 = {"links_too":[],"Buttons":[],"prev":"module_4"}
+chap10 = {"links_too":[],"Buttons":[],"prev":"module_4"}
+chap11 = {"links_too":[],"Buttons":[],"prev":"module_4"}
+chap12 = {"links_too":[],"Buttons":[],"prev":"module_4"}
+chap13 = {"links_too":[],"Buttons":[],"prev":"module_4"}
 
-#chap14 = {"links_too":[],"Buttons":[],"prev":"module_5"}
-#chap15 = {"links_too":[],"Buttons":[],"prev":"module_5"}
-#chap16 = {"links_too":[],"Buttons":[],"prev":"module_5"}
-#chap17 = {"links_too":[],"Buttons":[],"prev":"module_5"}
-#chap18 = {"links_too":[],"Buttons":[],"prev":"module_5"}
-#chap19 = {"links_too":[],"Buttons":[],"prev":"module_5"}
-#chap20 = {"links_too":[],"Buttons":[],"prev":"module_5"}
+chap14 = {"links_too":[],"Buttons":[],"prev":"module_5"}
+chap15 = {"links_too":[],"Buttons":[],"prev":"module_5"}
+chap16 = {"links_too":[],"Buttons":[],"prev":"module_5"}
+chap17 = {"links_too":[],"Buttons":[],"prev":"module_5"}
+chap18 = {"links_too":[],"Buttons":[],"prev":"module_5"}
+chap19 = {"links_too":[],"Buttons":[],"prev":"module_5"}
+chap20 = {"links_too":[],"Buttons":[],"prev":"module_5"}
 
 all_dics = (Mods,module_1,module_2,module_3,module_4,module_5,module_6)#,chap1,chap2,chap3,chap4,chap5,chap6,chap7,chap8,chap9,chap10,chap11,chap12,chap13,chap14,chap15,chap16,chap17,chap18,chap19,chap20)
 
@@ -145,8 +145,8 @@ all_dics = (Mods,module_1,module_2,module_3,module_4,module_5,module_6)#,chap1,c
 
 def nav_load_screen(x):
     clear_window() #clears window of widgets
-    #x = globals()[x]["Buttons"][0]
-    #x.grid(column = 0,row = 1)
+    y = globals()[x]["Buttons"][0]
+    x.grid(column = 0,row = 1)
     axis_x = 0
     axis_y = 2
     #for every button in the buttons list of the dic
@@ -164,13 +164,13 @@ def nav_load_screen(x):
 def create_menu_buttons():
     #for every dictionary in the list
     for y in all_dics:
-        #prev_dic_name = y
-        #prev_dic_name = prev_dic_name["prev"]
-        #but_name = [prev_dic_name + "_button"]
-        #print(but_name ,"was made")
-        #but_name = ttk.Button(window,text = "Go Back")
-        #but_name.config(command = lambda prev_dic_name=prev_dic_name:nav_load_screen(prev_dic_name))
-        #y["Buttons"].append(but_name)
+        prev_dic_name = y
+        prev_dic_name = prev_dic_name["prev"]
+        but_name = [prev_dic_name + "_button"]
+        print(but_name ,"was made")
+        but_name = ttk.Button(window,text = "Go Back")
+        but_name.config(command = lambda prev_dic_name=prev_dic_name:nav_load_screen(prev_dic_name))
+        y["Buttons"].append(but_name)
         
 
         #for every dictionary in the links too create a button for that 
